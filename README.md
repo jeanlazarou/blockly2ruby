@@ -3,13 +3,13 @@ blockly2ruby
 
 The Blockly project from https://code.google.com/p/blockly/ is a visual programming language aiming to be easy for beginners to learn programming...
 
-The programming environment runs in the browser, it saves the _program_ in an XML format, compile (or generates) to Javascript, Dart, Python.... it uses so called generators to make the translation.
+The programming environment runs in the browser, it saves the _program_ in an XML format, compiles (or generates) to Javascript, Dart, Python.... it uses so called generators to make the translation.
 
 _blockly2ruby_ implements generators for the Ruby programming language.
 
 I wrote the code and tested in a version of April 2014. I do not plan to maintain the code anymore.
 
-One problem I faced is that the generated code tries to produce the same result as Blockly while the philosophy is that the produced code should be easy to read and follow the target language aspects... contradictory somehow.
+One problem I faced is that the generated code tries to produce the same result as Blockly while the Blockly philosophy (https://code.google.com/p/blockly/wiki/Language) is that the produced code should be easy to read and follow the target language aspects... contradictory somehow.
 
 Code
 ----
@@ -27,7 +27,7 @@ Next sections give more information about the different parts.
 
 ### generators
 
-The generators where based on the Python generators, they are compatible with the April's version. I wrote two version of the generators because they changed during several months, as I do not intend working on this code anymore do not expect to make it work with recent version of Blocky.
+The generators were based on the Python generators, they are compatible with the April's version. I wrote two versions of the generators because they changed during several months, as I do not intend working on this code anymore do not expect to make it work with recent versions of Blocky.
 
 ### ruby_tester
 
@@ -52,7 +52,7 @@ Other special comments include:
 
 ### test
 
-The Javascript for the _Blocky unit tests_ generator come in two flavours:
+The Javascript for the _Blocky unit tests_ generator comes in two flavours:
 
 * unittest_ruby_normal.js: producing code being a straight mapping from _Blockly_ logic to Ruby code
 * unittest_ruby_unit.js: producing code integrating with Ruby's unit test framework
