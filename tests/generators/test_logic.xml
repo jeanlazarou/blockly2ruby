@@ -1,0 +1,254 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="IF0">
+      <block type="logic_boolean">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_if" inline="false" x="0" y="80">
+    <mutation else="1"></mutation>
+    <comment pinned="false" h="80" w="160">expects false</comment>
+    <value name="IF0">
+      <block type="logic_boolean">
+        <field name="BOOL">FALSE</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <statement name="ELSE">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="logic_boolean">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_if" inline="false" x="0" y="200">
+    <mutation elseif="1" else="1"></mutation>
+    <comment pinned="false" h="80" w="160">expects 1</comment>
+    <value name="IF0">
+      <block type="logic_compare" inline="true">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="IF1">
+      <block type="logic_compare" inline="true">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO1">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <statement name="ELSE">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="math_number">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_if" inline="false" x="0" y="390">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="IF0">
+      <block type="logic_operation" inline="true">
+        <field name="OP">AND</field>
+        <value name="A">
+          <block type="logic_compare" inline="true">
+            <field name="OP">NEQ</field>
+            <value name="A">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="B">
+          <block type="logic_compare" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">7</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_if" inline="false" x="0" y="490">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="IF0">
+      <block type="logic_operation" inline="true">
+        <field name="OP">OR</field>
+        <value name="A">
+          <block type="logic_compare" inline="true">
+            <field name="OP">NEQ</field>
+            <value name="A">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="B">
+          <block type="logic_compare" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">7</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_if" inline="false" x="0" y="590">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="IF0">
+      <block type="logic_negate" inline="false">
+        <value name="BOOL">
+          <block type="logic_boolean">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="text_print" inline="false" x="0" y="670">
+    <comment pinned="false" h="80" w="160">expects "LT 8"</comment>
+    <value name="TEXT">
+      <block type="logic_ternary" inline="false">
+        <value name="IF">
+          <block type="logic_compare" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">8</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="THEN">
+          <block type="text">
+            <field name="TEXT">LT 8</field>
+          </block>
+        </value>
+        <value name="ELSE">
+          <block type="text">
+            <field name="TEXT">GTE 8</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

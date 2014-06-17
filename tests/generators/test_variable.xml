@@ -1,0 +1,28 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects ""</comment>
+    <value name="TEXT">
+      <block type="variables_get">
+        <field name="VAR">item</field>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="40">
+    <field name="VAR">item</field>
+    <value name="VALUE">
+      <block type="math_number">
+        <field name="NUM">7</field>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" inline="false">
+        <comment pinned="false" h="41" w="134">expects 7</comment>
+        <value name="TEXT">
+          <block type="variables_get">
+            <field name="VAR">item</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

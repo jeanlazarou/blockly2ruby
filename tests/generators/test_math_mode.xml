@@ -1,0 +1,146 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" inline="true" x="0" y="0">
+    <field name="VAR">numbers</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">9</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">23</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" inline="false">
+        <comment pinned="false" h="80" w="160">expects "9,23,6,13"</comment>
+        <value name="TEXT">
+          <block type="math_on_list" inline="false">
+            <field name="OP">MODE</field>
+            <value name="LIST">
+              <block type="variables_get">
+                <field name="VAR">numbers</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="170">
+    <field name="VAR">numbers</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">9</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" inline="false">
+        <comment pinned="false" h="80" w="160">expects 13</comment>
+        <value name="TEXT">
+          <block type="math_on_list" inline="false">
+            <field name="OP">MODE</field>
+            <value name="LIST">
+              <block type="variables_get">
+                <field name="VAR">numbers</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="340">
+    <field name="VAR">numbers</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="7"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">9</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="text">
+            <field name="TEXT">x</field>
+          </block>
+        </value>
+        <value name="ADD4">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+        <value name="ADD5">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="ADD6">
+          <block type="text">
+            <field name="TEXT">x</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" inline="false">
+        <comment pinned="false" h="80" w="160">expects "13,x"</comment>
+        <value name="TEXT">
+          <block type="math_on_list" inline="false">
+            <field name="OP">MODE</field>
+            <value name="LIST">
+              <block type="variables_get">
+                <field name="VAR">numbers</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,67 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects "c"</comment>
+    <value name="TEXT">
+      <block type="text_getSubstring" inline="true">
+        <mutation at1="true" at2="true"></mutation>
+        <field name="WHERE1">FROM_START</field>
+        <field name="WHERE2">FROM_START</field>
+        <value name="STRING">
+          <block type="text">
+            <field name="TEXT">abcdef</field>
+          </block>
+        </value>
+        <value name="AT1">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+        <value name="AT2">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="50">
+    <comment pinned="false" h="80" w="160">expects "abc"</comment>
+    <value name="TEXT">
+      <block type="text_getSubstring" inline="true">
+        <mutation at1="false" at2="true"></mutation>
+        <field name="WHERE1">FIRST</field>
+        <field name="WHERE2">FROM_START</field>
+        <value name="STRING">
+          <block type="text">
+            <field name="TEXT">abcdef</field>
+          </block>
+        </value>
+        <value name="AT2">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="100">
+    <comment pinned="false" h="80" w="160">expects "ef"</comment>
+    <value name="TEXT">
+      <block type="text_getSubstring" inline="true">
+        <mutation at1="true" at2="false"></mutation>
+        <field name="WHERE1">FROM_END</field>
+        <field name="WHERE2">LAST</field>
+        <value name="STRING">
+          <block type="text">
+            <field name="TEXT">abcdef</field>
+          </block>
+        </value>
+        <value name="AT1">
+          <block type="math_number">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

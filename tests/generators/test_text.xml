@@ -1,0 +1,260 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects "hello"</comment>
+    <value name="TEXT">
+      <block type="text">
+        <field name="TEXT">hello</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="40">
+    <comment pinned="false" h="80" w="160">expects 5</comment>
+    <value name="TEXT">
+      <block type="text_length" inline="false">
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">hello</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="80">
+    <comment pinned="false" h="80" w="160">expects false</comment>
+    <value name="TEXT">
+      <block type="text_isEmpty" inline="true">
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">hello</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="130">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="TEXT">
+      <block type="text_isEmpty" inline="true">
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="180">
+    <comment pinned="false" h="80" w="160">expects "a"</comment>
+    <value name="TEXT">
+      <block type="text_join" inline="false">
+        <mutation items="1"></mutation>
+        <value name="ADD0">
+          <block type="text">
+            <field name="TEXT">a</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="220">
+    <comment pinned="false" h="80" w="160">expects "ab33"</comment>
+    <value name="TEXT">
+      <block type="text_join" inline="false">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="text">
+            <field name="TEXT">a</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="text">
+            <field name="TEXT">b</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">33</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="310">
+    <field name="VAR">text</field>
+    <value name="VALUE">
+      <block type="text">
+        <field name="TEXT">hel</field>
+      </block>
+    </value>
+    <next>
+      <block type="text_append" inline="false">
+        <field name="VAR">text</field>
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">lo</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "hello"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">text</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="text_print" inline="false" x="0" y="410">
+    <comment pinned="false" h="80" w="160">expects 3</comment>
+    <value name="TEXT">
+      <block type="text_indexOf" inline="true">
+        <field name="END">FIRST</field>
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">hello</field>
+          </block>
+        </value>
+        <value name="FIND">
+          <block type="text">
+            <field name="TEXT">l</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="460">
+    <comment pinned="false" h="80" w="160">expects 4</comment>
+    <value name="TEXT">
+      <block type="text_indexOf" inline="true">
+        <field name="END">LAST</field>
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">hello</field>
+          </block>
+        </value>
+        <value name="FIND">
+          <block type="text">
+            <field name="TEXT">l</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="510">
+    <comment pinned="false" h="80" w="160">expects 0</comment>
+    <value name="TEXT">
+      <block type="text_indexOf" inline="true">
+        <field name="END">LAST</field>
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">hello</field>
+          </block>
+        </value>
+        <value name="FIND">
+          <block type="text">
+            <field name="TEXT">z</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="560">
+    <comment pinned="false" h="80" w="160">expects 0</comment>
+    <value name="TEXT">
+      <block type="text_indexOf" inline="true">
+        <field name="END">FIRST</field>
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">hello</field>
+          </block>
+        </value>
+        <value name="FIND">
+          <block type="text">
+            <field name="TEXT">z</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="610">
+    <comment pinned="false" h="80" w="160">expects "abc"</comment>
+    <value name="TEXT">
+      <block type="text_trim" inline="false">
+        <field name="MODE">BOTH</field>
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">  abc  </field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="650">
+    <comment pinned="false" h="80" w="160">expects "  abc"</comment>
+    <value name="TEXT">
+      <block type="text_trim" inline="false">
+        <field name="MODE">RIGHT</field>
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">  abc  </field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="690">
+    <comment pinned="false" h="80" w="160">expects "abc  "</comment>
+    <value name="TEXT">
+      <block type="text_trim" inline="false">
+        <field name="MODE">LEFT</field>
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">  abc  </field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="730">
+    <comment pinned="false" h="80" w="160">expects "HELLO WORLD"</comment>
+    <value name="TEXT">
+      <block type="text_changeCase" inline="false">
+        <field name="CASE">UPPERCASE</field>
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">hello worLd</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="770">
+    <comment pinned="false" h="80" w="160">expects "hello world"</comment>
+    <value name="TEXT">
+      <block type="text_changeCase" inline="false">
+        <field name="CASE">LOWERCASE</field>
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">heLLo WorLd</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="810">
+    <comment pinned="false" h="80" w="160">expects "Hello World (from The Web)"</comment>
+    <value name="TEXT">
+      <block type="text_changeCase" inline="false">
+        <field name="CASE">TITLECASE</field>
+        <value name="TEXT">
+          <block type="text">
+            <field name="TEXT">heLLo WorLd (from the web)</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

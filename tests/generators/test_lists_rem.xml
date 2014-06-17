@@ -1,0 +1,267 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" inline="true" x="-3" y="0">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">-4</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" inline="false">
+        <comment pinned="false" h="80" w="160">expects 0</comment>
+        <value name="TEXT">
+          <block type="lists_getIndex" inline="true">
+            <mutation statement="false" at="true"></mutation>
+            <field name="MODE">GET_REMOVE</field>
+            <field name="WHERE">FROM_END</field>
+            <value name="VALUE">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+            <value name="AT">
+              <block type="math_number">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "7,-9,-4"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="190">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="text">
+            <field name="TEXT">#1</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="text">
+            <field name="TEXT">x3</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" inline="false">
+        <comment pinned="false" h="80" w="160">expects "#1"</comment>
+        <value name="TEXT">
+          <block type="lists_getIndex" inline="true">
+            <mutation statement="false" at="false"></mutation>
+            <field name="MODE">GET_REMOVE</field>
+            <field name="WHERE">FIRST</field>
+            <value name="VALUE">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "x3,7,-9"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="380">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="text">
+            <field name="TEXT">z2</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="text">
+            <field name="TEXT">x3</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" inline="false">
+        <comment pinned="false" h="80" w="160">expects 7</comment>
+        <value name="TEXT">
+          <block type="lists_getIndex" inline="true">
+            <mutation statement="false" at="true"></mutation>
+            <field name="MODE">GET_REMOVE</field>
+            <field name="WHERE">FROM_END</field>
+            <value name="VALUE">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+            <value name="AT">
+              <block type="math_number">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "z2,x3,-9"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="570">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="lists_getIndex" inline="true">
+        <mutation statement="true" at="false"></mutation>
+        <field name="MODE">REMOVE</field>
+        <field name="WHERE">LAST</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR">test list</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects 0,7</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="740">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="lists_getIndex" inline="true">
+        <mutation statement="true" at="false"></mutation>
+        <field name="MODE">REMOVE</field>
+        <field name="WHERE">FIRST</field>
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR">test list</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects 7,-9</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

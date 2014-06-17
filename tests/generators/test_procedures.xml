@@ -1,0 +1,148 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" x="0" y="0">
+    <mutation>
+      <arg name="first"></arg>
+      <arg name="last"></arg>
+    </mutation>
+    <field name="NAME">say hello</field>
+    <statement name="STACK">
+      <block type="variables_set" inline="true">
+        <field name="VAR">greeting</field>
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">Hello </field>
+          </block>
+        </value>
+        <next>
+          <block type="text_append" inline="false">
+            <field name="VAR">greeting</field>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">first</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_append" inline="false">
+                <field name="VAR">greeting</field>
+                <value name="TEXT">
+                  <block type="text">
+                    <field name="TEXT"> </field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_append" inline="false">
+                    <field name="VAR">greeting</field>
+                    <value name="TEXT">
+                      <block type="variables_get">
+                        <field name="VAR">last</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" inline="false">
+                        <value name="TEXT">
+                          <block type="variables_get">
+                            <field name="VAR">greeting</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_callnoreturn" inline="false" x="0" y="200">
+    <mutation name="say hello">
+      <arg name="first"></arg>
+      <arg name="last"></arg>
+    </mutation>
+    <comment pinned="false" h="80" w="160">expects 'Hello James Bond'</comment>
+    <value name="ARG0">
+      <block type="text">
+        <field name="TEXT">James</field>
+      </block>
+    </value>
+    <value name="ARG1">
+      <block type="text">
+        <field name="TEXT">Bond</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defreturn" inline="false" x="0" y="320">
+    <mutation>
+      <arg name="name"></arg>
+    </mutation>
+    <field name="NAME">build greeting</field>
+    <statement name="STACK">
+      <block type="variables_set" inline="true">
+        <field name="VAR">greeting</field>
+        <value name="VALUE">
+          <block type="text">
+            <field name="TEXT">Hello </field>
+          </block>
+        </value>
+        <next>
+          <block type="text_append" inline="false">
+            <field name="VAR">greeting</field>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">name</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get">
+        <field name="VAR">greeting</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="450">
+    <comment pinned="false" h="80" w="160">expects 'Hello James'</comment>
+    <value name="TEXT">
+      <block type="procedures_callreturn" inline="false">
+        <mutation name="build greeting">
+          <arg name="name"></arg>
+        </mutation>
+        <value name="ARG0">
+          <block type="text">
+            <field name="TEXT">James</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" x="0" y="560">
+    <mutation></mutation>
+    <field name="NAME">use global var</field>
+    <statement name="STACK">
+      <block type="text_print" inline="false">
+        <value name="TEXT">
+          <block type="variables_get">
+            <field name="VAR">global_var</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="640">
+    <field name="VAR">global_var</field>
+    <value name="VALUE">
+      <block type="text">
+        <field name="TEXT">global</field>
+      </block>
+    </value>
+    <next>
+      <block type="procedures_callnoreturn">
+        <mutation name="use global var"></mutation>
+        <comment pinned="false" h="80" w="160">expects "global"</comment>
+      </block>
+    </next>
+  </block>
+</xml>

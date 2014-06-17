@@ -1,0 +1,90 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects 17</comment>
+    <value name="TEXT">
+      <block type="math_constrain" inline="true">
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">17</field>
+          </block>
+        </value>
+        <value name="LOW">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="HIGH">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="50">
+    <comment pinned="false" h="80" w="160">expects 10</comment>
+    <value name="TEXT">
+      <block type="math_constrain" inline="true">
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">17</field>
+          </block>
+        </value>
+        <value name="LOW">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="HIGH">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="100">
+    <comment pinned="false" h="80" w="160">expects 30</comment>
+    <value name="TEXT">
+      <block type="math_constrain" inline="true">
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">17</field>
+          </block>
+        </value>
+        <value name="LOW">
+          <block type="math_number">
+            <field name="NUM">30</field>
+          </block>
+        </value>
+        <value name="HIGH">
+          <block type="math_number">
+            <field name="NUM">60</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="150">
+    <comment pinned="false" h="80" w="160">expects 10</comment>
+    <value name="TEXT">
+      <block type="math_constrain" inline="true">
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">17</field>
+          </block>
+        </value>
+        <value name="LOW">
+          <block type="math_number">
+            <field name="NUM">30</field>
+          </block>
+        </value>
+        <value name="HIGH">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

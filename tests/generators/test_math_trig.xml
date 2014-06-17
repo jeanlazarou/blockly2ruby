@@ -1,0 +1,80 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects 1.0</comment>
+    <value name="TEXT">
+      <block type="math_trig" inline="false">
+        <field name="OP">SIN</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">90</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="40">
+    <comment pinned="false" h="80" w="160">expects -1.0</comment>
+    <value name="TEXT">
+      <block type="math_trig" inline="false">
+        <field name="OP">COS</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">180</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="80">
+    <comment pinned="false" h="80" w="160">expects 0.9999999999999999</comment>
+    <value name="TEXT">
+      <block type="math_trig" inline="false">
+        <field name="OP">TAN</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">45</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="120">
+    <comment pinned="false" h="80" w="160">expects 90.0</comment>
+    <value name="TEXT">
+      <block type="math_trig" inline="false">
+        <field name="OP">ASIN</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="160">
+    <comment pinned="false" h="80" w="160">expects 180.0</comment>
+    <value name="TEXT">
+      <block type="math_trig" inline="false">
+        <field name="OP">ACOS</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">-1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="200">
+    <comment pinned="false" h="80" w="160">expects 45.0</comment>
+    <value name="TEXT">
+      <block type="math_trig" inline="false">
+        <field name="OP">ATAN</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

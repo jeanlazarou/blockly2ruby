@@ -1,0 +1,93 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects 3.0</comment>
+    <value name="TEXT">
+      <block type="math_single" inline="true">
+        <field name="OP">ROOT</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">9</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="50">
+    <comment pinned="false" h="80" w="160">expects 7</comment>
+    <value name="TEXT">
+      <block type="math_single" inline="true">
+        <field name="OP">ABS</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">-7</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="100">
+    <comment pinned="false" h="80" w="160">expects 7</comment>
+    <value name="TEXT">
+      <block type="math_single" inline="true">
+        <field name="OP">NEG</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">-7</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="150">
+    <comment pinned="false" h="80" w="160">expects 0.0</comment>
+    <value name="TEXT">
+      <block type="math_single" inline="true">
+        <field name="OP">LN</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="200">
+    <comment pinned="false" h="80" w="160">expects 1.0</comment>
+    <value name="TEXT">
+      <block type="math_single" inline="true">
+        <field name="OP">LOG10</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="250">
+    <comment pinned="false" h="80" w="160">expects 1.0</comment>
+    <value name="TEXT">
+      <block type="math_single" inline="true">
+        <field name="OP">EXP</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="300">
+    <comment pinned="false" h="80" w="160">expects 100</comment>
+    <value name="TEXT">
+      <block type="math_single" inline="true">
+        <field name="OP">POW10</field>
+        <value name="NUM">
+          <block type="math_number">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

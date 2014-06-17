@@ -1,0 +1,116 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects '#ff0000'</comment>
+    <value name="TEXT">
+      <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="30">
+    <comment pinned="false" h="80" w="160">expects random :colour</comment>
+    <value name="TEXT">
+      <block type="colour_random"></block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="60">
+    <comment pinned="false" h="80" w="160">expects '#000000'</comment>
+    <value name="TEXT">
+      <block type="colour_rgb" inline="false"></block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="140">
+    <comment pinned="false" h="80" w="160">expects '#00015e'</comment>
+    <value name="TEXT">
+      <block type="colour_rgb" inline="false">
+        <value name="RED">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="GREEN">
+          <block type="math_number">
+            <field name="NUM">0.4</field>
+          </block>
+        </value>
+        <value name="BLUE">
+          <block type="math_number">
+            <field name="NUM">37</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="220">
+    <comment pinned="false" h="80" w="160">expects '#ff015e'</comment>
+    <value name="TEXT">
+      <block type="colour_rgb" inline="false">
+        <value name="RED">
+          <block type="math_number">
+            <field name="NUM">600</field>
+          </block>
+        </value>
+        <value name="GREEN">
+          <block type="math_number">
+            <field name="NUM">0.4</field>
+          </block>
+        </value>
+        <value name="BLUE">
+          <block type="math_number">
+            <field name="NUM">37</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="300">
+    <comment pinned="false" h="80" w="160">expects '#000000'</comment>
+    <value name="TEXT">
+      <block type="colour_blend" inline="false"></block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="380">
+    <comment pinned="false" h="80" w="160">expects '#ffcc00'</comment>
+    <value name="TEXT">
+      <block type="colour_blend" inline="false">
+        <value name="COLOUR1">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+        <value name="COLOUR2">
+          <block type="colour_picker">
+            <field name="COLOUR">#ffff00</field>
+          </block>
+        </value>
+        <value name="RATIO">
+          <block type="math_number">
+            <field name="NUM">0.8</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="460">
+    <comment pinned="false" h="80" w="160">expects '#ffff00'</comment>
+    <value name="TEXT">
+      <block type="colour_blend" inline="false">
+        <value name="COLOUR1">
+          <block type="colour_picker">
+            <field name="COLOUR">#ff0000</field>
+          </block>
+        </value>
+        <value name="COLOUR2">
+          <block type="colour_picker">
+            <field name="COLOUR">#ffff00</field>
+          </block>
+        </value>
+        <value name="RATIO">
+          <block type="math_number">
+            <field name="NUM">20.4</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

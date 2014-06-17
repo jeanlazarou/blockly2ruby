@@ -1,0 +1,222 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" inline="true" x="0" y="0">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="lists_setIndex" inline="true">
+        <mutation at="false"></mutation>
+        <field name="MODE">SET</field>
+        <field name="WHERE">LAST</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">test list</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="text">
+            <field name="TEXT">ok</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "1,-9,ok"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="160">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="text">
+            <field name="TEXT">z2</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="text">
+            <field name="TEXT">x3</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="lists_setIndex" inline="true">
+        <mutation at="true"></mutation>
+        <field name="MODE">SET</field>
+        <field name="WHERE">FROM_START</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">test list</field>
+          </block>
+        </value>
+        <value name="AT">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="text">
+            <field name="TEXT">#1</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "#1,x3,7,-9"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="345">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="text">
+            <field name="TEXT">z2</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="text">
+            <field name="TEXT">x3</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="lists_setIndex" inline="true">
+        <mutation at="true"></mutation>
+        <field name="MODE">SET</field>
+        <field name="WHERE">FROM_END</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">test list</field>
+          </block>
+        </value>
+        <value name="AT">
+          <block type="math_number">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="text">
+            <field name="TEXT">#2</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "z2,x3,#2,-9"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="530">
+    <field name="VAR">test list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">-9</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">7</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="lists_setIndex" inline="true">
+        <mutation at="false"></mutation>
+        <field name="MODE">SET</field>
+        <field name="WHERE">FIRST</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">test list</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="text">
+            <field name="TEXT">ok</field>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" inline="false">
+            <comment pinned="false" h="80" w="160">expects "ok,-9,7"</comment>
+            <value name="TEXT">
+              <block type="variables_get">
+                <field name="VAR">test list</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

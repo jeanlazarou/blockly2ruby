@@ -1,0 +1,105 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects false</comment>
+    <value name="TEXT">
+      <block type="math_number_property" inline="true">
+        <mutation divisor_input="false"></mutation>
+        <field name="PROPERTY">EVEN</field>
+        <value name="NUMBER_TO_CHECK">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="50">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="TEXT">
+      <block type="math_number_property" inline="true">
+        <mutation divisor_input="false"></mutation>
+        <field name="PROPERTY">ODD</field>
+        <value name="NUMBER_TO_CHECK">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="100">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="TEXT">
+      <block type="math_number_property" inline="true">
+        <mutation divisor_input="false"></mutation>
+        <field name="PROPERTY">PRIME</field>
+        <value name="NUMBER_TO_CHECK">
+          <block type="math_number">
+            <field name="NUM">17</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="150">
+    <comment pinned="false" h="80" w="160">expects false</comment>
+    <value name="TEXT">
+      <block type="math_number_property" inline="true">
+        <mutation divisor_input="false"></mutation>
+        <field name="PROPERTY">WHOLE</field>
+        <value name="NUMBER_TO_CHECK">
+          <block type="math_number">
+            <field name="NUM">4.6</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="200">
+    <comment pinned="false" h="80" w="160">expects true</comment>
+    <value name="TEXT">
+      <block type="math_number_property" inline="true">
+        <mutation divisor_input="false"></mutation>
+        <field name="PROPERTY">POSITIVE</field>
+        <value name="NUMBER_TO_CHECK">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="250">
+    <comment pinned="false" h="80" w="160">expects false</comment>
+    <value name="TEXT">
+      <block type="math_number_property" inline="true">
+        <mutation divisor_input="false"></mutation>
+        <field name="PROPERTY">NEGATIVE</field>
+        <value name="NUMBER_TO_CHECK">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="300">
+    <comment pinned="false" h="80" w="160">expects false</comment>
+    <value name="TEXT">
+      <block type="math_number_property" inline="true">
+        <mutation divisor_input="true"></mutation>
+        <field name="PROPERTY">DIVISIBLE_BY</field>
+        <value name="NUMBER_TO_CHECK">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="DIVISOR">
+          <block type="math_number">
+            <field name="NUM">4</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

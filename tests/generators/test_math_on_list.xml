@@ -1,0 +1,211 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" inline="true" x="0" y="0">
+    <field name="VAR">numbers</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">9</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="100">
+    <comment pinned="false" h="80" w="160">expects 28</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">SUM</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="140">
+    <comment pinned="false" h="80" w="160">expects 6</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">MIN</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="180">
+    <comment pinned="false" h="80" w="160">expects 13</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">MAX</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="220">
+    <comment pinned="false" h="80" w="160">expects 9.333333333333334</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">AVERAGE</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="260">
+    <comment pinned="false" h="80" w="160">expects 9</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">MEDIAN</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="340">
+    <field name="VAR">list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">9</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="text">
+            <field name="TEXT">a</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="460">
+    <comment pinned="false" h="80" w="160">expects 13</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">MAX</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="500">
+    <comment pinned="false" h="80" w="160">expects 9.333333333333334</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">AVERAGE</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set" inline="true" x="0" y="570">
+    <field name="VAR">numbers</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="4"></mutation>
+        <value name="ADD0">
+          <block type="math_number">
+            <field name="NUM">9</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">23</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="math_number">
+            <field name="NUM">13</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="700">
+    <comment pinned="false" h="80" w="160">expects 11</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">MEDIAN</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="740">
+    <comment pinned="false" h="80" w="160">expects 6.417748826496718</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">STD_DEV</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="780">
+    <comment pinned="false" h="80" w="160">expects random [9, 23, 6, 13]</comment>
+    <value name="TEXT">
+      <block type="math_on_list" inline="false">
+        <field name="OP">RANDOM</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">numbers</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

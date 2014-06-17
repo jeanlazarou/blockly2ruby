@@ -1,0 +1,243 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" inline="true" x="0" y="0">
+    <field name="VAR">list</field>
+    <value name="VALUE">
+      <block type="lists_create_with" inline="false">
+        <mutation items="5"></mutation>
+        <value name="ADD0">
+          <block type="text">
+            <field name="TEXT">a</field>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="math_number">
+            <field name="NUM">11</field>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="math_number">
+            <field name="NUM">17</field>
+          </block>
+        </value>
+        <value name="ADD3">
+          <block type="text">
+            <field name="TEXT">yz</field>
+          </block>
+        </value>
+        <value name="ADD4">
+          <block type="text">
+            <field name="TEXT">b</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="150">
+    <comment pinned="false" h="80" w="160">expects "a,11,17,yz,b"</comment>
+    <value name="TEXT">
+      <block type="lists_getSublist" inline="true">
+        <mutation at1="false" at2="false"></mutation>
+        <field name="WHERE1">FIRST</field>
+        <field name="WHERE2">LAST</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="200">
+    <comment pinned="false" h="80" w="160">expects "a,11,17"</comment>
+    <value name="TEXT">
+      <block type="lists_getSublist" inline="true">
+        <mutation at1="false" at2="true"></mutation>
+        <field name="WHERE1">FIRST</field>
+        <field name="WHERE2">FROM_START</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+        <value name="AT2">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="250">
+    <comment pinned="false" h="80" w="160">expects "a,11,17,yz"</comment>
+    <value name="TEXT">
+      <block type="lists_getSublist" inline="true">
+        <mutation at1="false" at2="true"></mutation>
+        <field name="WHERE1">FIRST</field>
+        <field name="WHERE2">FROM_END</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+        <value name="AT2">
+          <block type="math_number">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="300">
+    <comment pinned="false" h="80" w="160">expects "11,17"</comment>
+    <value name="TEXT">
+      <block type="lists_getSublist" inline="true">
+        <mutation at1="true" at2="true"></mutation>
+        <field name="WHERE1">FROM_START</field>
+        <field name="WHERE2">FROM_START</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+        <value name="AT1">
+          <block type="math_number">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <value name="AT2">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="350">
+    <comment pinned="false" h="80" w="160">expects "11,17,yz,b"</comment>
+    <value name="TEXT">
+      <block type="lists_getSublist" inline="true">
+        <mutation at1="true" at2="true"></mutation>
+        <field name="WHERE1">FROM_START</field>
+        <field name="WHERE2">FROM_END</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+        <value name="AT1">
+          <block type="math_number">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <value name="AT2">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="400">
+    <comment pinned="false" h="80" w="160">expects "17,yz,b"</comment>
+    <value name="TEXT">
+      <block type="lists_getSublist" inline="true">
+        <mutation at1="true" at2="true"></mutation>
+        <field name="WHERE1">FROM_END</field>
+        <field name="WHERE2">FROM_END</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+        <value name="AT1">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+        <value name="AT2">
+          <block type="math_number">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="450">
+    <comment pinned="false" h="80" w="160">expects "17,yz,b"</comment>
+    <value name="TEXT">
+      <block type="lists_getSublist" inline="true">
+        <mutation at1="true" at2="false"></mutation>
+        <field name="WHERE1">FROM_END</field>
+        <field name="WHERE2">LAST</field>
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+        <value name="AT1">
+          <block type="math_number">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="500">
+    <comment pinned="false" h="80" w="160">expects 0</comment>
+    <value name="TEXT">
+      <block type="lists_length" inline="false">
+        <value name="VALUE">
+          <block type="lists_getSublist" inline="true">
+            <mutation at1="true" at2="true"></mutation>
+            <field name="WHERE1">FROM_END</field>
+            <field name="WHERE2">FROM_END</field>
+            <value name="LIST">
+              <block type="variables_get">
+                <field name="VAR">list</field>
+              </block>
+            </value>
+            <value name="AT1">
+              <block type="math_number">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <value name="AT2">
+              <block type="math_number">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="-1" y="554">
+    <comment pinned="false" h="80" w="160">expects 0</comment>
+    <value name="TEXT">
+      <block type="lists_length" inline="false">
+        <value name="VALUE">
+          <block type="lists_getSublist" inline="true">
+            <mutation at1="true" at2="true"></mutation>
+            <field name="WHERE1">FROM_START</field>
+            <field name="WHERE2">FROM_START</field>
+            <value name="LIST">
+              <block type="variables_get">
+                <field name="VAR">list</field>
+              </block>
+            </value>
+            <value name="AT1">
+              <block type="math_number">
+                <field name="NUM">17</field>
+              </block>
+            </value>
+            <value name="AT2">
+              <block type="math_number">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

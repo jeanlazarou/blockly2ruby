@@ -1,0 +1,50 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="text_print" inline="false" x="0" y="0">
+    <comment pinned="false" h="80" w="160">expects 3.141592653589793</comment>
+    <value name="TEXT">
+      <block type="math_constant">
+        <field name="CONSTANT">PI</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="40">
+    <comment pinned="false" h="80" w="160">expects 2.718281828459045</comment>
+    <value name="TEXT">
+      <block type="math_constant">
+        <field name="CONSTANT">E</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="80">
+    <comment pinned="false" h="80" w="160">expects 1.618033988749895</comment>
+    <value name="TEXT">
+      <block type="math_constant">
+        <field name="CONSTANT">GOLDEN_RATIO</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="120">
+    <comment pinned="false" h="80" w="160">expects 1.4142135623730951</comment>
+    <value name="TEXT">
+      <block type="math_constant">
+        <field name="CONSTANT">SQRT2</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="160">
+    <comment pinned="false" h="80" w="160">expects 0.7071067811865476</comment>
+    <value name="TEXT">
+      <block type="math_constant">
+        <field name="CONSTANT">SQRT1_2</field>
+      </block>
+    </value>
+  </block>
+  <block type="text_print" inline="false" x="0" y="200">
+    <comment pinned="false" h="80" w="160">expects Infinity</comment>
+    <value name="TEXT">
+      <block type="math_constant">
+        <field name="CONSTANT">INFINITY</field>
+      </block>
+    </value>
+  </block>
+</xml>

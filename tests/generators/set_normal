@@ -1,0 +1,2 @@
+rm unittest_ruby.js
+ln -s unittest_ruby_normal.js unittest_ruby.js
